@@ -1,3 +1,4 @@
+<img width="1349" height="632" alt="Screenshot 2026-04-28 165048" src="https://github.com/user-attachments/assets/f51067e7-e9a3-4542-b7ce-87ed258742e5" />
 # Stellar Live Poll
 
 A decentralized Live Poll application built for the Stellar Journey to Mastery Level 2 (Yellow Belt) challenge.
