@@ -1,20 +1,47 @@
 <img width="1349" height="632" alt="Screenshot 2026-04-28 165048" src="https://github.com/user-attachments/assets/f51067e7-e9a3-4542-b7ce-87ed258742e5" />
 # Stellar Live Poll
 
-A decentralized Live Poll application built for the Stellar Journey to Mastery Level 2 (Yellow Belt) challenge.
+A decentralized Live Poll application built for the **Stellar Journey to Mastery Level 2 (Yellow Belt)** challenge. This project leverages the Stellar network and Soroban smart contracts to provide a secure, real-time voting experience.
 
-## Challenge Details
+## 🎯 Purpose
+
+The primary purpose of the Stellar Live Poll is to demonstrate the integration of modern frontend technologies (Next.js) with the Stellar blockchain via Soroban smart contracts. It serves as an educational milestone in the Journey to Mastery, showcasing how to interact with smart contracts, manage wallet connections, and handle on-chain transactions efficiently.
+
+## 🚀 Features
+
+- **Multi-Wallet Integration:** Seamlessly connect using Freighter, Albedo, and Hana wallets via `@creit.tech/stellar-wallets-kit`.
+- **Soroban Smart Contract:** A robust Rust-based smart contract deployed on the Stellar Testnet to securely manage poll states and tabulate votes.
+- **Real-Time Sync:** Automatic polling for transaction statuses (Pending, Success, Fail), ensuring the UI is always up-to-date with the blockchain state.
+- **Robust Error Handling:** Comprehensive alerts and fallback mechanisms for:
+  - Wallet not found or not installed
+  - Transactions rejected by the user
+  - Insufficient balances for transaction fees
+- **Modern User Interface:** Built with Next.js, providing a responsive and intuitive user experience.
+
+## 🗺️ Milestones
+
+- [x] Initial project setup and repository creation.
+- [x] Soroban smart contract development for voting logic.
+- [x] Smart contract deployment to Stellar Testnet.
+- [x] Next.js frontend setup and UI design.
+- [x] Stellar Wallets Kit integration (Freighter, Albedo, Hana).
+- [x] Implement vote reading and writing to the smart contract.
+- [x] Real-time transaction status polling.
+- [x] Comprehensive error handling and user feedback.
+- [x] Detailed project documentation and README.
+
+## 🔗 Challenge Details
 
 - **Live Demo Link:** [Insert Live Demo Link Here]
 - **Contract Address:** [Insert Contract Address Here]
 - **Transaction Hash:** [Insert Transaction Hash Here]
 
-## Project Structure
+## 📂 Project Structure
 
-- `contracts/`: Soroban smart contract written in Rust.
-- `frontend/`: Next.js web application with Stellar Wallets Kit integration.
+- `contracts/`: Contains the Soroban smart contract written in Rust.
+- `frontend/`: Contains the Next.js web application with Stellar Wallets Kit integration.
 
-## Smart Contract Deployment
+## 🛠️ Smart Contract Setup & Deployment
 
 ### Prerequisites
 - Install [Rust](https://rustup.rs/)
@@ -40,9 +67,9 @@ A decentralized Live Poll application built for the Stellar Journey to Mastery L
      --source alice \
      --network testnet
    ```
-   *Note the Contract ID returned and paste it into the `README.md` and frontend `LivePoll.tsx`.*
+   *Note the Contract ID returned and paste it into the frontend `LivePoll.tsx`.*
 
-## Frontend Setup
+## 💻 Frontend Setup
 
 1. **Install dependencies:**
    ```bash
@@ -51,20 +78,21 @@ A decentralized Live Poll application built for the Stellar Journey to Mastery L
    ```
 
 2. **Configure Contract ID:**
-   Open `frontend/src/components/LivePoll.tsx` and update the `CONTRACT_ID` constant with your deployed contract address.
-   Alternatively, add a `.env.local` file with `NEXT_PUBLIC_CONTRACT_ID=your_contract_address`.
+   Open `frontend/src/components/LivePoll.tsx` (or your relevant configuration file) and update the `CONTRACT_ID` constant with your deployed contract address.
+   Alternatively, add a `.env.local` file with:
+   ```env
+   NEXT_PUBLIC_CONTRACT_ID=your_contract_address
+   ```
 
 3. **Run the development server:**
    ```bash
    npm run dev
    ```
 
-## Features
+## 🤝 Contributing
 
-- **Multi-Wallet Integration:** Supports Freighter, Albedo, and Hana via `@creit.tech/stellar-wallets-kit`.
-- **Smart Contract Interaction:** Reads and writes voting data to a Soroban smart contract on the Stellar Testnet.
-- **Mandatory Error Handling:** Captures and displays alerts for:
-  - Wallet not found/installed
-  - Transaction rejected by user
-  - Insufficient balance for fees
-- **Real-Time Sync:** Automatically polls for transaction status (Pending, Success, Fail) and updates the UI.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
